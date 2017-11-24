@@ -5,7 +5,7 @@ self.addEventListener('push', function (event) {
     self.registration.showNotification(title, { 
     body: payload.msg,
     url: payload.url,
-    icon: payload.icon,
+    icon: './src/video/logo1.png',
     actions: [
         { action: 'voteup', title: '𑠀 Vote Up' }, 
         { action: 'votedown', title: '𑠀 Vote Down' }],
