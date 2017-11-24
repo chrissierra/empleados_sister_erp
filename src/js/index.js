@@ -11,7 +11,7 @@ function success1_entrada(position) {
   var latLngA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
   var latLngB = new google.maps.LatLng(localStorage.getItem("latitud"), localStorage.getItem("longitud"));
   var distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
-  //alert(distance);//In metres
+  ////alert(distance);//In metres
   global_distancia=distance;
  efectiva_entrada()
  
@@ -19,18 +19,18 @@ function success1_entrada(position) {
 
 
   function efectiva_entrada() {
-   alert(global_distancia)
+   //alert(global_distancia)
    valor_global_distancia= parseInt(global_distancia);
-   alert(valor_global_distancia)
+   //alert(valor_global_distancia)
     if(valor_global_distancia > 100){
-      alert("no, por lejania")
+      //alert("no, por lejania")
       //toast no por qq estas muy lejs
       switch_entrada.checked=false;
       switch_entrada.disabled=false;
             document.getElementById("toast_fuera_coordenada").open();
     }else if(valor_global_distancia<=0  || valor_global_distancia < 99){
 
-      alert("aca")
+      //alert("aca")
       path="https://unwieldy-labradoodle-8398.dataplicity.io/jaja/bower_components/gentelella/production/model/vista_empleados/vista_empleados_sister.php";
     fetch(path, {
               method: 'POST',
@@ -44,7 +44,7 @@ function success1_entrada(position) {
           .then(function(miBlob) {
     
     
-    alert(miBlob);
+    //alert(miBlob);
     if(miBlob=="Ejecución exitosa"){
     switch_entrada.disabled=true;
     ver_hora_movimiento("verificar_asistencia","switch_entrada_item", "switch_entrada", "Entrada a las ");
@@ -52,14 +52,14 @@ function success1_entrada(position) {
     }
           });
     }else{
-      alert("aca")
+      //alert("aca")
       switch_entrada.disabled=false;
     }
     }
 
 
 function marcando_entrada(){
-alert("se apreta")
+//alert("se apreta")
 switch_entrada.disabled=true;
 
 calibrando_gps();
@@ -136,7 +136,7 @@ calibrando_gps();
 // obtener_locacion();
 
 setTimeout(function() {
-  //alert(global_distancia)
+  ////alert(global_distancia)
 }, 400);
 
 
@@ -165,7 +165,7 @@ switch_entrada.invalid=false;
 
 }else{
 // si es que aun no ha ingresado....1
-//  alert("asdf")
+//  //alert("asdf")
 }
 
       });
@@ -203,7 +203,7 @@ switch_salida.invalid=false;
  
 //  switch_salida.checked=true;
 // si es que aun no ha SALIDO....1
-// alert("asdf")
+// //alert("asdf")
 }
 
       });
@@ -221,7 +221,7 @@ switch_salida.invalid=false;
 
 
 function marcando_salida(){
-  alert("en marcando salida")
+  //alert("en marcando salida")
 calibrando_gps();
 switch_salida.disabled=true;
 
@@ -264,7 +264,7 @@ document.getElementById(id_switch).invalid=false;
  
 //  switch_salida.checked=true;
 // si es que aun no ha SALIDO....1
-// alert("asdf")
+// //alert("asdf")
 }
 
       });
@@ -282,10 +282,10 @@ maximumAge: 0
 function success(pos) {
 var crd = pos.coords;
 
-alert('Your current position is:');
-alert(`Latitude : ${crd.latitude}`);
-alert(`Longitude: ${crd.longitude}`);
-alert(`More or less ${crd.accuracy} meters.`);
+//alert('Your current position is:');
+//alert(`Latitude : ${crd.latitude}`);
+//alert(`Longitude: ${crd.longitude}`);
+//alert(`More or less ${crd.accuracy} meters.`);
 };
 
 function error(err) {
@@ -305,11 +305,11 @@ navigator.geolocation.getCurrentPosition(
               var latLngA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
               var latLngB = new google.maps.LatLng(localStorage.getItem("latitud"), localStorage.getItem("longitud"));
               var distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
-            //alert(distance);//In metres
+            ////alert(distance);//In metres
               
           },
           function() {
-              alert("geolocation not supported!!");
+              //alert("geolocation not supported!!");
           }
   );
   
@@ -323,7 +323,7 @@ navigator.geolocation.getCurrentPosition(
 
 
 function error(position) {
-alert("no soporta gps")
+//alert("no soporta gps")
 }
 
 function calibrando_gps(){
@@ -350,7 +350,7 @@ function success1(position) {
   var latLngA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
   var latLngB = new google.maps.LatLng(localStorage.getItem("latitud"), localStorage.getItem("longitud"));
   var distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
-  //alert(distance);//In metres
+  ////alert(distance);//In metres
   global_distancia=distance;
   
   }
@@ -359,7 +359,7 @@ function success1(position) {
     var latLngA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
     var latLngB = new google.maps.LatLng(localStorage.getItem("latitud"), localStorage.getItem("longitud"));
     var distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
-    //alert(distance);//In metres
+    ////alert(distance);//In metres
     global_distancia=distance;
     realizando_efectiva_salida()
     }
@@ -368,7 +368,7 @@ function success1(position) {
 
 
 function realizando_efectiva_salida() {
-  // alert(global_distancia)
+  // //alert(global_distancia)
   if(global_distancia>100){
     //toast no por qq estas muy lejs
     switch_salida.checked=false;
@@ -376,7 +376,7 @@ function realizando_efectiva_salida() {
           document.getElementById("toast_fuera_coordenada").open();
   }else if(global_distancia<=0 || global_distancia<99){
   
-  //alert("Adsf")
+  ////alert("Adsf")
     path="https://unwieldy-labradoodle-8398.dataplicity.io/jaja/bower_components/gentelella/production/model/vista_empleados/vista_empleados_sister.php";
     fetch(path, {
             method: 'POST',
@@ -389,7 +389,7 @@ function realizando_efectiva_salida() {
         })
         .then(function(miBlob) {
   
-    alert(miBlob);
+    //alert(miBlob);
           if(miBlob=="Ejecución exitosa"){
           switch_salida.disabled=true;
           document.getElementById("switch_salida_item").disabled=true;

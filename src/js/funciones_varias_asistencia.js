@@ -34,7 +34,7 @@ function ver_hora_movimiento(variable_en_query, id_item, id_switch, texto){
      
     //  switch_salida.checked=true;
     // si es que aun no ha SALIDO....1
-    // alert("asdf")
+    // //alert("asdf")
     }
     
           });

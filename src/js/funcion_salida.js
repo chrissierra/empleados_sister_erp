@@ -9,7 +9,7 @@ FUNCION MARCANDO_SALIDA
 
 
 function marcando_salida(){
-  alert("en marcando salida")
+  //alert("en marcando salida")
 calibrando_gps();
 switch_salida.disabled=true;
 
@@ -54,7 +54,7 @@ FUNCION SUCCESS1_SALIDA
     var latLngA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
     var latLngB = new google.maps.LatLng(localStorage.getItem("latitud"), localStorage.getItem("longitud"));
     var distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
-    //alert(distance);//In metres
+    ////alert(distance);//In metres
     global_distancia=distance;
     realizando_efectiva_salida()
     }
@@ -88,7 +88,7 @@ FUNCION REALIZANDO EFECTIVA LA SALIDA
 
 
 function realizando_efectiva_salida() {
-  // alert(global_distancia)
+  // //alert(global_distancia)
 if(global_distancia>160){
     
     //toast no por qq estas muy lejs
@@ -105,7 +105,7 @@ if(global_distancia>160){
 
           function funcion_resolve(miBlob) {
                   var ejecucion_exitosa= new String("exitosa")
-                    alert(miBlob);
+                    //alert(miBlob);
                           if(miBlob.search(ejecucion_exitosa)>=0){
                           switch_salida.disabled=true;
                           document.getElementById("switch_salida_item").disabled=true;

@@ -11,7 +11,7 @@ function success1_entrada(position) {
     var latLngA = new google.maps.LatLng(position.coords.latitude,position.coords.longitude);
     var latLngB = new google.maps.LatLng(localStorage.getItem("latitud"), localStorage.getItem("longitud"));
     var distance = google.maps.geometry.spherical.computeDistanceBetween(latLngA, latLngB);
-    //alert(distance);//In metres
+    ////alert(distance);//In metres
     global_distancia=distance;
    efectiva_entrada()
    
@@ -36,18 +36,18 @@ function success1_entrada(position) {
   
   
     function efectiva_entrada() {
-     alert(global_distancia)
+     //alert(global_distancia)
      valor_global_distancia= parseInt(global_distancia);
-     alert(valor_global_distancia)
+     //alert(valor_global_distancia)
       if(valor_global_distancia > 160){
-        alert("no, por lejania")
+        //alert("no, por lejania")
         //toast no por qq estas muy lejs
         switch_entrada.checked=false;
         switch_entrada.disabled=false;
               document.getElementById("toast_fuera_coordenada").open();
       }else if(valor_global_distancia<=0  || valor_global_distancia < 159){
   
-        alert("aca")
+        //alert("aca")
         path="https://unwieldy-labradoodle-8398.dataplicity.io/jaja/bower_components/gentelella/production/model/vista_empleados/vista_empleados_sister.php";
       fetch(path, {
                 method: 'POST',
@@ -61,9 +61,9 @@ function success1_entrada(position) {
             .then(function(miBlob) {
       
       
-      alert(miBlob);
+      //alert(miBlob);
       var ejecucion_exitosa= new String("exitosa")
-      alert(miBlob);
+      //alert(miBlob);
             if(miBlob.search(ejecucion_exitosa)>=0){
     //  if(miBlob=="Ejecución exitosa"){
 
@@ -73,14 +73,14 @@ function success1_entrada(position) {
 
 
 
-        alert("en ejecucion exitosa ya")
+        //alert("en ejecucion exitosa ya")
       switch_entrada.disabled=true;
       ver_hora_movimiento("verificar_asistencia","switch_entrada_item", "switch_entrada", "Entrada a las ");
       //ver_hora_movimiento("verificar_asistencia");
       }
             });
       }else{
-        alert("aca")
+        //alert("aca")
         switch_entrada.disabled=false;
       }
       } // FIN FUNCION
@@ -104,7 +104,7 @@ function success1_entrada(position) {
   
   
   function marcando_entrada(){
-  alert("se apreta")
+  //alert("se apreta")
   switch_entrada.disabled=true;
   
   calibrando_gps();

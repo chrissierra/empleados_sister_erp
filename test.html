@@ -38,7 +38,7 @@ boton_ingreso.addEventListener("click", function(){
   var usuario=document.getElementById("usuario").value;
 var rut =document.getElementById("rut").value;
 path="https://unwieldy-labradoodle-8398.dataplicity.io/jaja/bower_components/gentelella/production/model/vista_empleados/vista_empleados_sister.php";
-alert(rut)
+//alert(rut)
   fetch(path, {
             method: 'POST',
             body: 'usuario='+usuario+'&rut='+rut+"&labor=get_query",
@@ -66,9 +66,9 @@ alert(rut)
           localStorage.setItem("nombre_empresa_usuario_plataforma",miBlob.nombre_empresa_usuario_plataforma);
           localStorage.setItem("latitud", miBlob.latitud);
           localStorage.setItem("longitud", miBlob.longitud);
-          alert(miBlob.nombre_empresa_usuario_plataforma);
-          alert(miBlob.nombre);
-          alert(miBlob.latitud);
+          //alert(miBlob.nombre_empresa_usuario_plataforma);
+          //alert(miBlob.nombre);
+          //alert(miBlob.latitud);
 location.href="./index.html";
           
         

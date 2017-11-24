@@ -11,7 +11,7 @@ function loading_page(){
     if(!(localStorage.getItem("id"))){
     location.href="./test.html";
     }else{
-    //    alert("asdf")
+    //    //alert("asdf")
     }
 /*
 declarando variables:
@@ -62,7 +62,7 @@ promesa.then((data)=> { ajax_fetch(path, data, function funcion_verificar_asiste
 
         }else{
         // si es que aun no ha ingresado....1
-        //  alert("asdf")
+        //  //alert("asdf")
         }
 }, "json");
 
@@ -91,7 +91,7 @@ promesa.then((data)=> { ajax_fetch(path, data, function funcion_verificar_asiste
      
     //  switch_salida.checked=true;
     // si es que aun no ha SALIDO....1
-    // alert("asdf")
+    // //alert("asdf")
     }
     
           }// fin funcion verificar salida
