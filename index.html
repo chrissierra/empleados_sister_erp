@@ -12,7 +12,7 @@
     <link rel="manifest" href="./manifest.json">
     <link rel="import" href="./src/modulos/header.html">
 
-<script src="./src/js/index1.js"></script>
+<script src="./src/js/index2.js"></script>
   </head>
   <body unresolved>
     
@@ -21,10 +21,12 @@
           <div  style="height: 100%; overflow: auto;background-color:#f5f5f5">
           <app-toolbar class="navToolbar" ><h2>Menú</h2>    </app-toolbar> 
 <!--   Content lateral   -->
-<div role="listbox" >
+<div role="listbox" style="display:flex; flex-direction:column;flex-wrap:nowrap; align-content:space-between"  >
     <paper-item><a href="./liquidaciones.html" style="text-decoration:none; color:black">Liquidaciones</a> </paper-item>
     <paper-item><a href="./contrato.html" style="text-decoration:none;color:black">Contrato</a></paper-item>
     <paper-item><a href="./asistencia.html" style="text-decoration:none;color:black">Asistencia</a></paper-item>
+  
+    <paper-item style="align-self:baseline"><paper-button raised class="custom indigo" onclick="askPermission()" id="boton_notificaciones">Recibe notificaciones</paper-button></paper-item>
   </div>
  </div>
 <!--   Content lateral   -->
@@ -155,7 +157,14 @@ paper-card{
   background-color: #efebeb;
  
 } 
-
+paper-button.indigo {
+    background-color: var(--paper-indigo-500);
+    color: white;
+    --paper-button-raised-keyboard-focus: {
+      background-color: var(--paper-pink-a200) !important;
+      color: white !important;
+    };
+  }
 
 </style>
   </body>
